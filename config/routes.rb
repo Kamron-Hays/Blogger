@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   root to: 'articles#index' # default page to render
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 end
